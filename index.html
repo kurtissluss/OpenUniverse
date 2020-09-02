@@ -4,13 +4,15 @@
     <meta charset="utf-8">
     <title>Open Universe V0.1.0</title>
     <link rel="stylesheet" type="text/css" href="core.css">
+	<script src="js/vue.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
 
   <body>
     <html id="header-background">
       <div class="navbar">
         <div>
-          <img class="logo" src="images/logo.svg">
+          <img class="logo" src="images/logo.svg" alt="openUniverseLogo">
           <ul class="navList">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
@@ -26,7 +28,7 @@
           <h2 class="OUmain">A personal exploration into software and hardware.</h2>
         </div>
       </div>
-      <div class="contact">
+      <div class="contact" id="contactApp">
 		<div class="joinNewsletter">
 		  Want to hear from me? You can join my weekly newsletter below.
 		</div>
@@ -34,19 +36,19 @@
 		  <div class="contactName">
 		    <span class="slot">
 			  <label class="contactLabel" for="nl-first-name">First Name</label>
-			  <input id="nl-first-name" name="giveName" class="fluid" placeholder="Kurtis" type="text">
+			  <input id="nl-first-name" name="giveName" class="fluid" placeholder="Kurtis" type="text" v-model="firstName">
 	        </span>
 		    <span class="slot">
 			  <label class="contactLabel" for="nl-last-name">Last Name</label>
-			  <input id="nl-last-name" name="surName" class="fluid" placeholder="Sluss">
+			  <input id="nl-last-name" name="surName" class="fluid" placeholder="Sluss" v-model="lastName">
 		    </span>
 		  </div>
 		  <div class="contactEmail">
 			  <label class="contactLabel" for="nl-first-name">Email<a class="requiredStar">*</a></label>
-			  <input id="requiredEmail" name="contactEmail" class="fluid" placeholder="example@openuniverse.io">
+			  <input id="requiredEmail" name="contactEmail" class="fluid" placeholder="example@openuniverse.io" v-model="contactEmail">
 		  </div>
 		  <div class="styleButton">
-			  <button class="contactButton">submit</button>
+			  <button class="contactButton" id="submitButton" v-on:click="submitEmail">submit</button>
 		  </div>
 	    </form>
 	  </div>
@@ -57,9 +59,9 @@
 	  	<p>&#169; 2020  |  Open Universe</p>
 	  </div>
 	  <div class="social">
-	  	<a href="https://github.com/kurtissluss"><i id="social-github" class="social-icon"><img src="images/github.svg" class="filter-white"></i></a>
-		<a href="https://twitter.com/kurtissluss?lang=en"><i id="social-twitter" class="social-icon"><img src="images/twitter.svg" class="filter-white"></i></a>
-	  	<a href="https://medium.com/@kurtis.sluss"><i id="social-medium" class="social-icon"><img src="images/medium.svg" class="filter-white"></i></a>
+	  	<a href="https://github.com/kurtissluss"><i id="social-github" class="social-icon"><img src="images/github.svg" class="filter-white" alt="githubLogo"></i></a>
+		<a href="https://twitter.com/kurtissluss?lang=en"><i id="social-twitter" class="social-icon"><img src="images/twitter.svg" class="filter-white" alt="twitterLogo"></i></a>
+	  	<a href="https://medium.com/@kurtis.sluss"><i id="social-medium" class="social-icon"><img src="images/medium.svg" class="filter-white" alt="mediumLogo"></i></a>
 	  </div>
   </footer>
 </html>
