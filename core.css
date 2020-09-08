@@ -7,7 +7,6 @@
   background-repeat: no-repeat;
   padding-left: -10px;
   background-color: #000000;
-  border: 3px solid white;
 }
 
 .header {
@@ -287,7 +286,6 @@ input.fluid {
 	height: 50%;
 	margin: 0 14.9em;
 	align-content: center;
-	border: 3px solid white;
 }
 
 .leftColumn {
