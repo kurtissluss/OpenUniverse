@@ -1,12 +1,13 @@
 #header-background {
   position: absolute;
-  width: 1800px;
+  width: 111.7em;
   height: 100%;
   background: url(images/header-background.png);
   z-index: -1;
   background-repeat: no-repeat;
   padding-left: -10px;
   background-color: #000000;
+  border: 3px solid white;
 }
 
 .header {
@@ -284,19 +285,20 @@ input.fluid {
 .doubleColumns {
 	float:left;
 	height: 50%;
-	margin: 0 200px;
+	margin: 0 14.9em;
 	align-content: center;
+	border: 3px solid white;
 }
 
 .leftColumn {
 	float:left;
-	width: 44.89%;
+	width: 44%;
 	padding: 0 2em;
 }
 
 .rightColumn {
 	float:left;
-	width: 44.89%;
+	width: 44%;
 	padding: 0 2em;
 	margin:0 -1px;
 }
