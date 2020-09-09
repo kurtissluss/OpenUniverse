@@ -20,10 +20,9 @@ var submit = new Vue({
 					contactEmail: this.contactEmail,
 				})
 				.then(function (response) {
-					submit.firstName = '';
+					submit.firstName = 'Test';
 					submit.lastName = '';
 					submit.contactEmail = '';
-					console.log("Cleared")
 				})
 				.catch(function (error) {
 					console.log(error);
