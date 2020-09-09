@@ -1,13 +1,16 @@
 // JavaScript Document
-console.log("Vue Entered");
-
 var submit = new Vue({
 	el: '#contactApp',
 	
 	data: {
-		firstName: "",
-		lastName: "",
-		contactEmail: ""
+		firstName: '',
+		lastName: '',
+		contactEmail: ''
+	},
+	
+	mounted: function () {
+		console.log('hello from vue')
+		this.submitEmail()
 	},
 		
 	methods: {
@@ -20,9 +23,10 @@ var submit = new Vue({
 					contactEmail: this.contactEmail,
 				})
 				.then(function (response) {
-					submit.firstName = 'Test';
+					submit.firstName = '';
 					submit.lastName = '';
 					submit.contactEmail = '';
+					console.log(response);
 				})
 				.catch(function (error) {
 					console.log(error);
