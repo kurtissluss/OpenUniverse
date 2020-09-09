@@ -8,6 +8,8 @@ var submit = new Vue({
 		contactEmail: ""
 	},
 	
+	console.log("Vue Entered");
+	
 	methods: {
 		submitEmail: function () {
 			if(this.contactEmail != ''){
@@ -15,12 +17,14 @@ var submit = new Vue({
 					request: 1,
 					firstName: this.firstName,
 					lastName: this.lastName,
-					contactEmail: this.contactEmail
+					contactEmail: this.contactEmail;
+					console.log("Posted")
 				})
 				.then(function (response) {
 					submit.firstName = '';
 					submit.lastName = '';
 					submit.contactEmail = '';
+					console.log("Cleared")
 				})
 				.catch(function (error) {
 					console.log(error);
