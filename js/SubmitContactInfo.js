@@ -1,4 +1,6 @@
 // JavaScript Document
+console.log("Vue Entered");
+
 var submit = new Vue({
 	el: '#contactApp',
 	
@@ -7,9 +9,7 @@ var submit = new Vue({
 		lastName: "",
 		contactEmail: ""
 	},
-	
-	console.log("Vue Entered");
-	
+		
 	methods: {
 		submitEmail: function () {
 			if(this.contactEmail != ''){
@@ -17,8 +17,7 @@ var submit = new Vue({
 					request: 1,
 					firstName: this.firstName,
 					lastName: this.lastName,
-					contactEmail: this.contactEmail;
-					console.log("Posted")
+					contactEmail: this.contactEmail,
 				})
 				.then(function (response) {
 					submit.firstName = '';
