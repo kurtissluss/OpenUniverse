@@ -65,4 +65,45 @@
 	  	<a href="https://medium.com/@kurtis.sluss"><i id="social-medium" class="social-icon"><img src="images/medium.svg" class="filter-white" alt="mediumLogo"></i></a>
 	  </div>
   </footer>
+  <script>
+	var submit = new Vue({
+		el: '#contactApp',
+
+		data: {
+			firstName: '',
+			lastName: '',
+			contactEmail: ''
+		},
+
+		mounted: function () {
+			console.log('hello from vue')
+			this.submitEmail()
+		},
+
+		methods: {
+			submitEmail: function () {
+				alert("It's working")
+				if(this.contactEmail != ''){
+					axios.post('ajaxfile.php', {
+						request: 1,
+						firstName: this.firstName,
+						lastName: this.lastName,
+						contactEmail: this.contactEmail,
+					})
+					.then(function (response) {
+						submit.firstName = '';
+						submit.lastName = '';
+						submit.contactEmail = '';
+						console.log(response);
+					})
+					.catch(function (error) {
+						console.log(error);
+					});
+				}else{
+					alert('Please add your email.')
+				}
+			}
+		}
+	})
+  </script>
 </html>
