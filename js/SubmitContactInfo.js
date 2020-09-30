@@ -15,6 +15,7 @@ var submit = new Vue({
 		
 	methods: {
 		submitEmail: function () {
+			alert("It's working")
 			if(this.contactEmail != ''){
 				axios.post('ajaxfile.php', {
 					request: 1,
